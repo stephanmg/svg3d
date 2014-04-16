@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# author: stephan
+#######################
+### author: stephan
+### note: for now only quadrilaterals and triangles in 1d, 2d, 3d
 
 # import xml parsing utility
 import xml.etree.ElementTree as ET
