@@ -4,8 +4,9 @@
 ### author: stephan
 ### note: for now only quadrilaterals and triangles in 1d, 2d, 3d
 
-# import xml parsing utility
+# import xml and argument parsing utilities
 import xml.etree.ElementTree as ET
+import argparse as AP
 
 # wrappers for exporters
 def ugtosvg1(fin, fout):
@@ -26,7 +27,21 @@ def ugtosvg(fin, fout, dim_=-1):
    # debug
    debug = True
 
-   # string constants
+   # read the xml tree
+   tree = ET.parse(fin)
+   root = tree.getroot()
+   
+   # determine dim of grid
+   if ( dim_ == -1 ):
+      dim = int(tree.findall('vertices')[0].get('coords'))
+   else:
+      dim = dim_
+
+   if (not (dim >= 1 or dim <= 3)):
+      print("Dim is enforced to be in the range [1, 3]. Aborting.")
+      return
+
+   # set-up string constants
    prepend = """<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20030114.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -34,19 +49,15 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
     <script type="text/ecmascript" xlink:href="../svg3d/svg3d.js" />
     <script type="text/ecmascript" xlink:href="../svg3d/svg3d_parsing.js" />
     <script type="text/ecmascript" xlink:href="../svg3d/dom_utils.js" />
-        <title>SVG animation - Ball</title>
+        <title>SVG 3D animation - $TITLE </title>
     <g id="g1" onclick="svg3d.toggleRotation()">
-   """
+   """.replace("$TITLE", "generated from: " + fin.split(".")[0] + " ugx grid (dim = $DIM)").replace("$DIM", str(dim))
    middle = """
    """
    append = """</g> 
 </svg>
    """
 
-   # read the xml tree
-   tree = ET.parse(fin)
-   root = tree.getroot()
-   
    # preprocessing & variable setup
    digits   = []
    quads    = []
@@ -57,16 +68,7 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
    for atype in tree.findall('vertices'):
       digits = atype.text.split(" ")
 
-   if ( dim_ == -1 ):
-      dim = int(tree.findall('vertices')[0].get('coords'))
-   else:
-      dim = dim_
-
-   if (not (dim >= 1 or dim <= 3)):
-      print("Dim is enforced to be in the range [1, 3]. Aborting.")
-      return
-
-   # consistency check
+   # consistency check and vertices coordinate setup
    if (dim == 3):
      for vertex in range(0, len(digits)-2, dim):
          vertices.append([float(digits[vertex]), float(digits[vertex+1]), float(digits[vertex+2])])
@@ -183,6 +185,9 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
 
 # execute when run as main 
 if __name__ == "__main__":
-   fin  = "unit_cube_test.ugx"
-   fout = "unit_cube_test.svg"
-   ugtosvg(fin, fout)
+   parser = AP.ArgumentParser(description='Export ugx to 3d svg')
+   parser.add_argument("input", type=str, help="Input file, e. g. ugx grid file")
+   parser.add_argument("output", type=str, help="Output file, e. g. svg file")
+   parser.add_argument("-d", "--debug", type=bool, help="Debug exporter, i. e. True or False")
+   args = vars(parser.parse_args())
+   ugtosvg(args['input'], args['output'])
