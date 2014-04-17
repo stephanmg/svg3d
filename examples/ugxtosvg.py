@@ -9,23 +9,23 @@ import xml.etree.ElementTree as ET
 import argparse as AP
 
 # wrappers for exporters
-def ugtosvg1(fin, fout):
+def ugtosvg1(fin, fout, verbosity=False):
    """ Exports a 1d grid to a svg in 3d """
-   return ugtosvg(fin, fout, 1)
+   return ugtosvg(fin, fout, 1, verbosity)
 
-def ugtosvg2(fin, fout):
+def ugtosvg2(fin, fout, verbosity=False):
    """ Exports an surface grid in 2d to a svg in 3d """
-   ugtosvg(fin, fout, 2)
+   ugtosvg(fin, fout, 2, verbosity)
 
-def ugtosvg3(fin, fout):
+def ugtosvg3(fin, fout, verbosity=False):
    """ Export an volume grid in 3d to a svg in 3d """
-   ugtosvg(fin, fout, 3)
+   ugtosvg(fin, fout, 3, verbosity)
 
 # exporter
-def ugtosvg(fin, fout, dim_=-1):
+def ugtosvg(fin, fout, dim_=-1, verbosity_=False):
    """ Export a grid either 1d, 2d, or 3d to a svg in 3d """
    # debug
-   debug = True
+   verbosity = verbosity_
 
    # read the xml tree
    tree = ET.parse(fin)
@@ -181,13 +181,14 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
    output.write(prepend)
    output.close()
 
-   if (debug): print(prepend)
+   if (verbosity): print(prepend)
 
 # execute when run as main 
 if __name__ == "__main__":
    parser = AP.ArgumentParser(description='Export ugx to 3d svg')
    parser.add_argument("input", type=str, help="Input file, e. g. ugx grid file")
    parser.add_argument("output", type=str, help="Output file, e. g. svg file")
-   parser.add_argument("-d", "--debug", type=bool, help="Debug exporter, i. e. True or False")
+   parser.add_argument("-v", "--verbose", action="store_true", help="Verbosity turned on", default=False)
+   parser.add_argument("-d", "--dim", type=int, help="World dimension", default=-1)
    args = vars(parser.parse_args())
-   ugtosvg(args['input'], args['output'])
+   ugtosvg(args['input'], args['output'], args['dim'], args['verbose'])
