@@ -2,30 +2,28 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20030114.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="100%" onload="svg3d.init(this)" z:sortAlgo="allToAll">
-    <script type="text/ecmascript" xlink:href="../svg3d/svg3d.js" />
-    <script type="text/ecmascript" xlink:href="../svg3d/svg3d_parsing.js" />
-    <script type="text/ecmascript" xlink:href="../svg3d/dom_utils.js" />
-        <title>SVG animation - Ball</title>
-    <g id="g1" onclick="svg3d.toggleRotation()">
-   
-   <path id="1" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,-100.0,-100.0L-100.0,100.0,-100.0L100.0,100.0,-100.0L100.0,-100.0,-100.0z" z:threeD="true">
-<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
-</path>
-<path id="2" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,-100.0,-100.0L100.0,-100.0,-100.0L100.0,-100.0,100.0L-100.0,-100.0,100.0z" z:threeD="true">
-<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
-</path>
-<path id="3" style="fill: red; stroke:black; fill-opacity:0.1" d="M100.0,-100.0,-100.0L100.0,100.0,-100.0L100.0,100.0,100.0L100.0,-100.0,100.0z" z:threeD="true">
-<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
-</path>
-<path id="4" style="fill: red; stroke:black; fill-opacity:0.1" d="M100.0,100.0,-100.0L-100.0,100.0,-100.0L-100.0,100.0,100.0L100.0,100.0,100.0z" z:threeD="true">
-<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
-</path>
-<path id="5" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,100.0,-100.0L-100.0,-100.0,-100.0L-100.0,-100.0,100.0L-100.0,100.0,100.0z" z:threeD="true">
-<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
-</path>
-<path id="6" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,-100.0,100.0L100.0,-100.0,100.0L100.0,100.0,100.0L-100.0,100.0,100.0z" z:threeD="true">
-<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
-</path>
-</g> 
-</svg>
-   
+<script type="text/ecmascript" xlink:href="../svg3d/svg3d.js" />
+<script type="text/ecmascript" xlink:href="../svg3d/svg3d_parsing.js" />
+<script type="text/ecmascript" xlink:href="../svg3d/dom_utils.js" />
+<title>SVG 3D animation - generated from: unit_cube_test ugx grid (dim = 3) </title>
+   <g id="g1" onclick="svg3d.toggleRotation()">
+   	<path id="1" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,-100.0,-100.0L-100.0,100.0,-100.0L100.0,100.0,-100.0L100.0,-100.0,-100.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="2" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,-100.0,-100.0L100.0,-100.0,-100.0L100.0,-100.0,100.0L-100.0,-100.0,100.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="3" style="fill: red; stroke:black; fill-opacity:0.1" d="M100.0,-100.0,-100.0L100.0,100.0,-100.0L100.0,100.0,100.0L100.0,-100.0,100.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="4" style="fill: red; stroke:black; fill-opacity:0.1" d="M100.0,100.0,-100.0L-100.0,100.0,-100.0L-100.0,100.0,100.0L100.0,100.0,100.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="5" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,100.0,-100.0L-100.0,-100.0,-100.0L-100.0,-100.0,100.0L-100.0,100.0,100.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="6" style="fill: red; stroke:black; fill-opacity:0.1" d="M-100.0,-100.0,100.0L100.0,-100.0,100.0L100.0,100.0,100.0L-100.0,100.0,100.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+    </g> 
+</svg> 

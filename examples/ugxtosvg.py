@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 #######################
 ### author: stephan
-### note: for now only quadrilaterals and triangles in 1d, 2d, 3d
+#######################
 
 # import xml and argument parsing utilities
 import xml.etree.ElementTree as ET
@@ -32,7 +32,7 @@ def ugtosvg(fin, fout, dim_=-1, verbosity_=False):
    root = tree.getroot()
    
    # determine dim of grid
-   if ( dim_ == -1 ):
+   if (dim_ == -1):
       dim = int(tree.findall('vertices')[0].get('coords'))
    else:
       dim = dim_
@@ -46,17 +46,15 @@ def ugtosvg(fin, fout, dim_=-1, verbosity_=False):
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20030114.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="100%" onload="svg3d.init(this)" z:sortAlgo="allToAll">
-    <script type="text/ecmascript" xlink:href="../svg3d/svg3d.js" />
-    <script type="text/ecmascript" xlink:href="../svg3d/svg3d_parsing.js" />
-    <script type="text/ecmascript" xlink:href="../svg3d/dom_utils.js" />
-        <title>SVG 3D animation - $TITLE </title>
-    <g id="g1" onclick="svg3d.toggleRotation()">
+<script type="text/ecmascript" xlink:href="../svg3d/svg3d.js" />
+<script type="text/ecmascript" xlink:href="../svg3d/svg3d_parsing.js" />
+<script type="text/ecmascript" xlink:href="../svg3d/dom_utils.js" />
+<title>SVG 3D animation - $TITLE </title>
+   <g id="g1" onclick="svg3d.toggleRotation()">
    """.replace("$TITLE", "generated from: " + fin.split(".")[0] + " ugx grid (dim = $DIM)").replace("$DIM", str(dim))
-   middle = """
-   """
-   append = """</g> 
-</svg>
-   """
+   middle = ""
+   append = """    </g> 
+</svg> """
 
    # preprocessing & variable setup
    digits   = []
@@ -95,15 +93,15 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
          quadstr += str(vertices[q][len(vertices[q])-1]) + "L"
 
       final_str = ""
-      final_str += '<path id="'
+      final_str += '\t<path id="'
       final_str += str(counter)
       final_str += '" style="fill: red; stroke:black; fill-opacity:0.1" d="';
       final_str += quadstr[:-1] + 'z"' 
       final_str += ' z:threeD="true">'
       final_str += "\n"
-      final_str += '<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>'
+      final_str += '\t\t<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>'
       final_str += "\n"
-      final_str += '</path>'
+      final_str += '\t</path>'
       final_str += "\n"
       counter = counter + 1
       middle += final_str
@@ -128,15 +126,15 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
          tristr += str(vertices[t][len(vertices[t])-1]) + "L"
       
       final_str = ""
-      final_str += '<path id="'
+      final_str += '\t<path id="'
       final_str += str(counter)
       final_str += '" style="fill: red;" d="';
       final_str += tristr[:-1] + 'z"' 
       final_str += ' z:threeD="true">'
       final_str += "\n"
-      final_str += '<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>'
+      final_str += '\t\t<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>'
       final_str += "\n"
-      final_str += '</path>'
+      final_str += '\t</path>'
       final_str += "\n"
       counter = counter + 1
       middle += final_str
@@ -162,15 +160,15 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
             edgestr += str(vertices[e][len(vertices[e])-1]) + "L"
          
          final_str = ""
-         final_str += '<path id="'
+         final_str += '\t<path id="'
          final_str += str(counter)
          final_str += '" style="fill: red;" d="';
          final_str += edgestr[:-1] + 'z"' 
          final_str += ' z:threeD="true">'
          final_str += "\n"
-         final_str += '<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>'
+         final_str += '\t\t<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>'
          final_str += "\n"
-         final_str += '</path>'
+         final_str += '\t</path>'
          final_str += "\n"
          counter = counter + 1
          middle += final_str
