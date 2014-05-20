@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20030114.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="100%" onload="svg3d.init(this)" z:sortAlgo="allToAll">
+<script type="text/ecmascript" xlink:href="../svg3d/svg3d.js" />
+<script type="text/ecmascript" xlink:href="../svg3d/svg3d_parsing.js" />
+<script type="text/ecmascript" xlink:href="../svg3d/dom_utils.js" />
+<title>SVG 3D animation - generated from: unit_cube_2x2x2_jump_diff ugx grid (dim = 3) </title>
+   <g id="g1" onclick="svg3d.toggleRotation()">
+   	<path id="1" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.5,1.0,0.0L0.0,1.0,0.0L0.0,0.5,0.0L0.5,0.5,0.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="2" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,100,0.0L50,100,0.0L50,50,0.0L100,50,0.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="3" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,0.0L0.0,50,0.0L0.0,0.0,0.0L50,0.0,0.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="4" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,50,0.0L50,50,0.0L50,0.0,0.0L100,0.0,0.0z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="5" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,50L0.0,50,50L0.0,0.0,50L50,0.0,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="6" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,0.0L0.0,50,0.0L0.0,50,50L50,50,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="7" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.0,50,0.0L0.0,0.0,0.0L0.0,0.0,50L0.0,50,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="8" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.0,0.0,0.0L50,0.0,0.0L50,0.0,50L0.0,0.0,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="9" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,0.0,0.0L50,50,0.0L50,50,50L50,0.0,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="10" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,100,50L0.0,100,50L0.0,50,50L50,50,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="11" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,100,0.0L0.0,100,0.0L0.0,100,50L50,100,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="12" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.0,100,0.0L0.0,50,0.0L0.0,50,50L0.0,100,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="13" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,0.0L50,100,0.0L50,100,50L50,50,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="14" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,100,50L50,100,50L50,50,50L100,50,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="15" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,100,0.0L50,100,0.0L50,100,50L100,100,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="16" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,0.0L100,50,0.0L100,50,50L50,50,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="17" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,50,0.0L100,100,0.0L100,100,50L100,50,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="18" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,50,50L50,50,50L50,0.0,50L100,0.0,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="19" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,0.0,0.0L100,0.0,0.0L100,0.0,50L50,0.0,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="20" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,0.0,0.0L100,50,0.0L100,50,50L100,0.0,50z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="21" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,100,100L0.0,100,100L0.0,50,100L50,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="22" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,100,50L0.0,100,50L0.0,100,100L50,100,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="23" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.0,100,50L0.0,50,50L0.0,50,100L0.0,100,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="24" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.0,50,50L50,50,50L50,50,100L0.0,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="25" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,50L50,100,50L50,100,100L50,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="26" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,100,100L50,100,100L50,50,100L100,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="27" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,100,50L50,100,50L50,100,100L100,100,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="28" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,50L100,50,50L100,50,100L50,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="29" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,50,50L100,100,50L100,100,100L100,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="30" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,50,100L50,50,100L50,0.0,100L100,0.0,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="31" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,50L50,0.0,50L50,0.0,100L50,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="32" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,0.0,50L100,0.0,50L100,0.0,100L50,0.0,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="33" style="fill: red; stroke:black; fill-opacity:0.1" d="M100,0.0,50L100,50,50L100,50,100L100,0.0,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="34" style="fill: red; stroke:black; fill-opacity:0.1" d="M50,50,100L0.0,50,100L0.0,0.0,100L50,0.0,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="35" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.0,50,50L0.0,0.0,50L0.0,0.0,100L0.0,50,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+	<path id="36" style="fill: red; stroke:black; fill-opacity:0.1" d="M0.0,0.0,50L50,0.0,50L50,0.0,100L0.0,0.0,100z" z:threeD="true">
+		<z:rotation incRotX="0.07" incRotY="0.03" incRotZ="0.02"/>
+	</path>
+    </g> 
+</svg> 
