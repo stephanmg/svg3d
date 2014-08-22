@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 #######################
 ### author: stephan
+### TODO    note: dim is misleading, since dim refers to elements present in the geometrry!
+###       better: discard dim dependency, and parse at whole an generate a 3d svg
+###              since we have coordinates every time with 3 coordinates, not 2 or 1,
+###              instead, we have elements which correspond only to 2d or 1d elements but
+##               nevertheless have 3 coordiantes!!!
 #######################
 
 # import xml and argument parsing utilities
@@ -65,6 +70,7 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
    # setup vertices
    for atype in tree.findall('vertices'):
       digits = atype.text.split(" ")
+      print(digits)
 
    # consistency check and vertices coordinate setup
    if (dim == 3):
@@ -81,9 +87,12 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
    for atype in tree.findall('quadrilaterals'):
       digits = atype.text.split(" ")
    
-   for quad in range(0, len(digits)-3, 4):
-      quads.append([int(digits[quad]), int(digits[quad+1]), int(digits[quad+2]), int(digits[quad+3])])
+   # TODO bug here, if we dont have quadrilaterals, then we have error here, also we dont handle geometries which only have edges!!! (i. e. 1d case not handle correctly, we need all coordinates, not only 1 coordiante!)
+   print(len(digits))
+ #  for quad in range(0, len(digits)-3, 4):
+  #    quads.append([int(digits[quad]), int(digits[quad+1]), int(digits[quad+2]), int(digits[quad+3])])
    
+   quads = []
    for quad in quads:
       quadstr = "M"
       for q in quad:
@@ -128,7 +137,8 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
       final_str = ""
       final_str += '\t<path id="'
       final_str += str(counter)
-      final_str += '" style="fill: red;" d="';
+      #final_str += '" style="fill: red;" d="';
+      final_str += '" style="fill: red; stroke:black; fill-opacity:0.1" d="';
       final_str += tristr[:-1] + 'z"' 
       final_str += ' z:threeD="true">'
       final_str += "\n"
@@ -147,6 +157,7 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
    if (dim == 1):
       for atype in tree.findall('edges'):
             digits = atype.text.split(" ")
+
          
       for edge in range(0, len(digits)-2, 2):
          edges.append([int(digits[edge]), int(digits[edge+1]), int(digits[edge+2])])
@@ -162,7 +173,8 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
          final_str = ""
          final_str += '\t<path id="'
          final_str += str(counter)
-         final_str += '" style="fill: red;" d="';
+         #final_str += '" style="fill: red;" d="';
+         final_str += '" style="fill: red; stroke:black; fill-opacity:0.1" d="';
          final_str += edgestr[:-1] + 'z"' 
          final_str += ' z:threeD="true">'
          final_str += "\n"
