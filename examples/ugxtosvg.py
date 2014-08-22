@@ -81,7 +81,8 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
          vertices.append([float(digits[vertex]), float(digits[vertex+1]), 0.0])
    elif (dim == 1):
      for vertex in range(0, len(digits)-2, dim):
-         vertices.append([float(digits[vertex]), 0.0, 0.0])
+         vertices.append([float(digits[vertex]), float(digits[vertex+1]), float(digits[vertex+2])])
+ #        vertices.append([float(digits[vertex]), 0.0, 0.0]) # BUG TODO here: 0.0, 0.0 is not right! i corrected this above, but still we need to fix bug below (we create a path of 3 vertices for one edge, but we need to create a path from two vertices which represent an edge!)
    
    # process quadrilaterals
    for atype in tree.findall('quadrilaterals'):
@@ -158,7 +159,7 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
       for atype in tree.findall('edges'):
             digits = atype.text.split(" ")
 
-         
+      # edge is not a triangle, i. e. we have 0,1 or 2,3 an edge not 0,1,2 or 2,3,4 as below (TODO bug here) see also above!!! => leads to bad output if invoked with -dim 1
       for edge in range(0, len(digits)-2, 2):
          edges.append([int(digits[edge]), int(digits[edge+1]), int(digits[edge+2])])
          
