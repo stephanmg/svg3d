@@ -76,7 +76,7 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
    if (dim == 3):
      for vertex in range(0, len(digits)-2, dim):
          vertices.append([float(digits[vertex]), float(digits[vertex+1]), float(digits[vertex+2])])
-   elif (dim == 2):
+   elif (dim == 2): # BUG TODO this is also obsolete, since we have everytime 3 coordinates!!!
      for vertex in range(0, len(digits)-2, dim):
          vertices.append([float(digits[vertex]), float(digits[vertex+1]), 0.0])
    elif (dim == 1):
@@ -92,7 +92,7 @@ xmlns:z="http://debeissat.nicolas.free.fr/svg3d/svg3d.rng" width="100%" height="
    print(len(digits))
  #  for quad in range(0, len(digits)-3, 4):
   #    quads.append([int(digits[quad]), int(digits[quad+1]), int(digits[quad+2]), int(digits[quad+3])])
-   
+   # TODO bug above, needs to be handled, in case we have quadrilaterals, for now not the case, but could be of course ...
    quads = []
    for quad in quads:
       quadstr = "M"
